@@ -309,6 +309,13 @@
     </div>
 </div>
 
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
 <div class="kira-post">
 	<article>
 		
@@ -327,11 +334,114 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2025年03月31日</a>
-			<a><i class="kirafont icon-edit-fill"></i>0 字</a>
+			<a><i class="kirafont icon-edit-fill"></i>379 字</a>
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
 		<html><head></head><body><meting-js server="netease" type="playlist" id="13051762915" mode="circulation" autoplay="false" mutex="true" listmaxheight="340px" preload="auto" theme="#ad7a86">
-</meting-js></body></html>
+</meting-js>
+
+<h2><span id="metingjs%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8">MetingJS播放器的使用</span></h2><h3><span id="%E5%BC%80%E5%A7%8B">开始</span></h3><p>Kira-Hexo自带了hexo-tag-aplayer依赖无需再次安装，用户可以使用它在文章中插入音乐。<br>使用MetingJS前，需在Hexo配置文件_config.yml中设置</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">aplayer:<br>  meting: <span class="hljs-literal">true</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%E4%BD%BF%E7%94%A8">使用</span></h3><p>通过<code>{% meting ...%}</code>在文章中使用 MetingJS 播放器<br>更详细的用法可自行查阅 <strong><a target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md#%E4%BD%BF%E7%94%A8">官方文档</a></strong></p>
+<h4><span id="%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B"><strong>简单示例：</strong></span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;!-- 简单示例 (<span class="hljs-built_in">id</span>, server, <span class="hljs-built_in">type</span>)  --&gt;<br>{% meting <span class="hljs-string">"60198"</span> <span class="hljs-string">"netease"</span> <span class="hljs-string">"playlist"</span> %}<br><br></code></pre></td></tr></tbody></table></figure>
+<h5><span id="%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><strong>参数说明:</strong></span></h5><ol>
+<li>音乐ID</li>
+<li>音乐平台(netease/网易云, tencent/QQ音乐等)</li>
+<li>类型(song, playlist, album等)</li>
+</ol>
+<hr>
+<h4><span id="%E8%BF%9B%E9%98%B6%E7%A4%BA%E4%BE%8B"><strong>进阶示例：</strong></span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;!-- 进阶示例 --&gt;<br>{% meting <span class="hljs-string">"60198"</span> <span class="hljs-string">"netease"</span> <span class="hljs-string">"playlist"</span> <span class="hljs-string">"autoplay"</span> <span class="hljs-string">"mutex:false"</span> <span class="hljs-string">"listmaxheight:340px"</span> <span class="hljs-string">"preload:none"</span> <span class="hljs-string">"theme:#ad7a86"</span>%}<br><br></code></pre></td></tr></tbody></table></figure>
+<h5><span id="%E6%9C%89%E5%85%B3%25-meting-%25%E7%9A%84%E9%80%89%E9%A1%B9%E5%88%97%E8%A1%A8%E5%A6%82%E4%B8%8B">有关<code>{% meting %}</code>的选项列表如下:</span></h5><table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">默认值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">必须值</td>
+<td align="center">歌曲 id / 播放列表 id / 相册 id / 搜索关键字</td>
+</tr>
+<tr>
+<td align="center">server</td>
+<td align="center">必须值</td>
+<td align="center">音乐平台: netease, tencent, kugou, xiami, baidu</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">必须值</td>
+<td align="center">song, playlist, album, search, artist</td>
+</tr>
+<tr>
+<td align="center">fixed</td>
+<td align="center">false</td>
+<td align="center">开启固定模式</td>
+</tr>
+<tr>
+<td align="center">mini</td>
+<td align="center">false</td>
+<td align="center">开启迷你模式</td>
+</tr>
+<tr>
+<td align="center">loop</td>
+<td align="center">all</td>
+<td align="center">列表循环模式：all, one,none</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">list</td>
+<td align="center">列表播放模式： list, random</td>
+</tr>
+<tr>
+<td align="center">volume</td>
+<td align="center">0.7</td>
+<td align="center">播放器音量</td>
+</tr>
+<tr>
+<td align="center">lrctype</td>
+<td align="center">0</td>
+<td align="center">歌词格式类型</td>
+</tr>
+<tr>
+<td align="center">listfolded</td>
+<td align="center">false</td>
+<td align="center">指定音乐播放列表是否折叠</td>
+</tr>
+<tr>
+<td align="center">storagename</td>
+<td align="center">metingjs</td>
+<td align="center">LocalStorage 中存储播放器设定的键名</td>
+</tr>
+<tr>
+<td align="center">autoplay</td>
+<td align="center">true</td>
+<td align="center">自动播放，移动端浏览器暂时不支持此功能</td>
+</tr>
+<tr>
+<td align="center">mutex</td>
+<td align="center">true</td>
+<td align="center">该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</td>
+</tr>
+<tr>
+<td align="center">listmaxheight</td>
+<td align="center">340px</td>
+<td align="center">播放列表的最大长度</td>
+</tr>
+<tr>
+<td align="center">preload</td>
+<td align="center">auto</td>
+<td align="center">音乐文件预载入模式，可选项： none, metadata, auto</td>
+</tr>
+<tr>
+<td align="center">theme</td>
+<td align="center">#ad7a86</td>
+<td align="center">播放器风格色彩设置</td>
+</tr>
+</tbody></table>
+</body></html>
 	</article>
 
 	 
