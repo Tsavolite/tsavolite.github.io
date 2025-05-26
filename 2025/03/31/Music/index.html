@@ -340,11 +340,14 @@
 		<html><head></head><body><meting-js server="netease" type="playlist" id="13051762915" mode="circulation" autoplay="false" mutex="true" listmaxheight="340px" preload="auto" theme="#ad7a86">
 </meting-js>
 
-<h2><span id="metingjs%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8">MetingJS播放器的使用</span></h2><h3><span id="%E5%BC%80%E5%A7%8B">开始</span></h3><p>Kira-Hexo自带了hexo-tag-aplayer依赖无需再次安装，用户可以使用它在文章中插入音乐。<br>使用MetingJS前，需在Hexo配置文件_config.yml中设置</p>
+<h2><span id="metingjs%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8">MetingJS播放器的使用</span></h2><h3><span id="%E5%BC%80%E5%A7%8B">开始</span></h3><p>Kira-Hexo自带了<a target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-aplayer">hexo-tag-aplayer</a>依赖无需再次安装，用户可以使用它在文章中插入音乐。<br>使用MetingJS前，需在Hexo配置文件_config.yml中设置</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">aplayer:<br>  meting: <span class="hljs-literal">true</span><br></code></pre></td></tr></tbody></table></figure>
 
 <h3><span id="%E4%BD%BF%E7%94%A8">使用</span></h3><p>通过<code>{% meting ...%}</code>在文章中使用 MetingJS 播放器<br>更详细的用法可自行查阅 <strong><a target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md#%E4%BD%BF%E7%94%A8">官方文档</a></strong></p>
+<hr>
 <h4><span id="%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B"><strong>简单示例：</strong></span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;!-- 简单示例 (<span class="hljs-built_in">id</span>, server, <span class="hljs-built_in">type</span>)  --&gt;<br>{% meting <span class="hljs-string">"60198"</span> <span class="hljs-string">"netease"</span> <span class="hljs-string">"playlist"</span> %}<br><br></code></pre></td></tr></tbody></table></figure>
+
+<hr>
 <h5><span id="%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><strong>参数说明:</strong></span></h5><ol>
 <li>音乐ID</li>
 <li>音乐平台(netease/网易云, tencent/QQ音乐等)</li>
@@ -441,6 +444,7 @@
 <td align="center">播放器风格色彩设置</td>
 </tr>
 </tbody></table>
+<hr>
 </body></html>
 	</article>
 
